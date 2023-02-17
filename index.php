@@ -49,3 +49,52 @@ class Movie
 
 $the_irishman = new Movie('The Irishman', 'Crime', 'Martin Scorsese', 'Sikelia Production', 'Steven Zaillian');
 $taxi_driver = new Movie('Taxi Driver', 'Thriller', 'Martin Scorsese', 'Michael Philips', 'Paul Schrader');
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Objects</title>
+
+    <!-- Bootstrap  -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous' />
+
+</head>
+
+<body>
+    <div class="text-center py-5">
+        <h1 class="text-secondary">
+            Movies:
+        </h1>
+
+        <!-- IRISHMAN  -->
+        <h3 class="pt-5 text-primary">
+            <?= $the_irishman->title ?>
+        </h3>
+        <ul class="list-group w-25 mx-auto">
+            <li class="list-group-item"><?= $the_irishman->genre ?></li>
+            <li class="list-group-item"><?= $the_irishman->director ?></li>
+            <li class="list-group-item"><?= $the_irishman->producer ?></li>
+            <li class="list-group-item"><?= $the_irishman->film_script ?></li>
+        </ul>
+
+        <!-- TAXI DRIVER  -->
+        <h3 class="pt-5 text-primary">
+            <?= $taxi_driver->title ?>
+        </h3>
+        <ul class="list-group w-25 mx-auto">
+            <li class="list-group-item"><?= $taxi_driver->genre ?></li>
+            <li class="list-group-item"><?= $taxi_driver->director ?></li>
+            <li class="list-group-item"><?= $taxi_driver->producer ?></li>
+            <li class="list-group-item"><?= $taxi_driver->film_script ?></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
