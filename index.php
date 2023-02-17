@@ -46,3 +46,6 @@ class Movie
         return "$this->director $this->producer";
     }
 }
+
+$the_irishman = new Movie('The Irishman', 'Crime', 'Martin Scorsese', 'Sikelia Production', 'Steven Zaillian');
+$taxi_driver = new Movie('Taxi Driver', 'Thriller', 'Martin Scorsese', 'Michael Philips', 'Paul Schrader');
