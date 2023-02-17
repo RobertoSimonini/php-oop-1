@@ -39,4 +39,10 @@ class Movie
         $this->producer = $_producer;
         $this->film_script = $_film_script;
     }
+
+    //Methods:
+    public function getFullTeam()
+    {
+        return "$this->director $this->producer";
+    }
 }
