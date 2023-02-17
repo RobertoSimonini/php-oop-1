@@ -1,5 +1,6 @@
 <?php
 /*  
+
 Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 ! è definita una classe Movie
 => all'interno della classe sono dichiarate delle variabili d'istanza
@@ -18,3 +19,14 @@ Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi 
 - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
 
 */
+
+class Movie
+{
+
+    // Variabili d'istanza 
+    public $title;
+    public $genre;
+    public $director;
+    public $producer;
+    public $film_script;
+}
