@@ -29,4 +29,14 @@ class Movie
     public $director;
     public $producer;
     public $film_script;
+
+    //Constructor
+    public function __construct($_title, $_genre, $_director, $_producer, $_film_script)
+    {
+        $this->title = $_title;
+        $this->genre = $_genre;
+        $this->director = $_director;
+        $this->producer = $_producer;
+        $this->film_script = $_film_script;
+    }
 }
