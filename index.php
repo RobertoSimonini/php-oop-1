@@ -50,6 +50,8 @@ class Movie
 $the_irishman = new Movie('The Irishman', 'Crime', 'Martin Scorsese', 'Sikelia Production', 'Steven Zaillian');
 $taxi_driver = new Movie('Taxi Driver', 'Thriller', 'Martin Scorsese', 'Michael Philips', 'Paul Schrader');
 
+$movies = [$the_irishman, $taxi_driver];
+
 ?>
 
 <!DOCTYPE html>
@@ -73,27 +75,17 @@ $taxi_driver = new Movie('Taxi Driver', 'Thriller', 'Martin Scorsese', 'Michael 
         </h1>
 
         <!-- IRISHMAN  -->
-        <h3 class="pt-5 text-primary">
-            <?= $the_irishman->title ?>
-        </h3>
-        <ul class="list-group w-25 mx-auto">
-            <li class="list-group-item"><?= $the_irishman->genre ?></li>
-            <li class="list-group-item"><?= $the_irishman->director ?></li>
-            <li class="list-group-item"><?= $the_irishman->producer ?></li>
-            <li class="list-group-item"><?= $the_irishman->film_script ?></li>
-        </ul>
-
-        <!-- TAXI DRIVER  -->
-        <h3 class="pt-5 text-primary">
-            <?= $taxi_driver->title ?>
-        </h3>
-        <ul class="list-group w-25 mx-auto">
-            <li class="list-group-item"><?= $taxi_driver->genre ?></li>
-            <li class="list-group-item"><?= $taxi_driver->director ?></li>
-            <li class="list-group-item"><?= $taxi_driver->producer ?></li>
-            <li class="list-group-item"><?= $taxi_driver->film_script ?></li>
-        </ul>
-
+        <?php foreach ($movies as $movie) : ?>
+            <ul class="list-group w-25 mx-auto">
+                <h3 class="pt-5 text-primary">
+                    <?= $movie->title ?>
+                </h3>
+                <li class="list-group-item"><?= $movie->genre ?></li>
+                <li class="list-group-item"><?= $movie->director ?></li>
+                <li class="list-group-item"><?= $movie->producer ?></li>
+                <li class="list-group-item"><?= $movie->film_script ?></li>
+            </ul>
+        <?php endforeach ?>
     </div>
 </body>
 
